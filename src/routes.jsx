@@ -21,38 +21,43 @@ import { UserOrdersPage } from './pages/UserOrdersPage';
 import { UserProfilePage } from './pages/UserProfilePage';
 import { UserSettingsPage } from './pages/UserSettingsPage';
 import { WishlistPage } from './pages/WishlistPage';
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Layout />,
+      children: [
+        { index: true, element: <HomePage /> },
+        { path: 'shop', element: <ShopPage /> },
+        { path: 'product/:id', element: <ProductDetailPage /> },
+        { path: 'cart', element: <CartPage /> },
+        { path: 'login', element: <LoginPage /> },
+        { path: 'signup', element: <SignupPage /> },
+        { path: 'checkout', element: <CheckoutPage /> },
+        { path: 'order-summary', element: <OrderSummaryPage /> },
+        { path: 'wishlist', element: <WishlistPage /> },
+        { path: 'compare', element: <ComparePage /> },
+        { path: 'contact', element: <ContactPage /> },
+        { path: 'about', element: <AboutPage /> },
+        { path: 'blog', element: <BlogPage /> },
+        { path: 'blog/:id', element: <BlogDetailPage /> },
+        { path: 'faq', element: <FAQPage /> },
+        { path: 'profile', element: <UserProfilePage /> },
+        { path: 'orders', element: <UserOrdersPage /> },
+        { path: 'addresses', element: <UserAddressesPage /> },
+        { path: 'settings', element: <UserSettingsPage /> },
+        { path: 'shipping', element: <ShippingPage /> },
+        { path: 'privacy', element: <PrivacyPage /> },
+        {
+          path: '*',
+          element: <div className='p-20 text-center'>Page Not Found</div>,
+        },
+      ],
+    },
+  ],
   {
-    path: '/sunday-bazar/',
-    element: <Layout />,
-    children: [
-      { index: true, element: <HomePage /> },
-      { path: 'shop', element: <ShopPage /> },
-      { path: 'product/:id', element: <ProductDetailPage /> },
-      { path: 'cart', element: <CartPage /> },
-      { path: 'login', element: <LoginPage /> },
-      { path: 'signup', element: <SignupPage /> },
-      { path: 'checkout', element: <CheckoutPage /> },
-      { path: 'order-summary', element: <OrderSummaryPage /> },
-      { path: 'wishlist', element: <WishlistPage /> },
-      { path: 'compare', element: <ComparePage /> },
-      { path: 'contact', element: <ContactPage /> },
-      { path: 'about', element: <AboutPage /> },
-      { path: 'blog', element: <BlogPage /> },
-      { path: 'blog/:id', element: <BlogDetailPage /> },
-      { path: 'faq', element: <FAQPage /> },
-      { path: 'profile', element: <UserProfilePage /> },
-      { path: 'orders', element: <UserOrdersPage /> },
-      { path: 'addresses', element: <UserAddressesPage /> },
-      { path: 'settings', element: <UserSettingsPage /> },
-      { path: 'shipping', element: <ShippingPage /> },
-      { path: 'privacy', element: <PrivacyPage /> },
-      {
-        path: '*',
-        element: <div className='p-20 text-center'>Page Not Found</div>,
-      },
-    ],
+    basename: '/sunday-bazar',
   },
-]);
+);
 
 export const routes = router;

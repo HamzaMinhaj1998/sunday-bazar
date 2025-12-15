@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://hamzaminhaj1998.github.io/sunday-bazar",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -24,7 +24,7 @@ export const LoginPage = () => {
       try {
         const user = await login(values).unwrap();
         dispatch(setCredentials(user));
-        navigate('/sunday-bazar/');
+        navigate('/');
       } catch (err) {
         console.error('Failed to login:', err);
       }

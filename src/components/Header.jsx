@@ -39,7 +39,7 @@ export const Header = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}
-          <Link to='/sunday-bazar/' className='shrink-0 flex items-center'>
+          <Link to='/' className='shrink-0 flex items-center'>
             <span className='text-2xl font-bold tracking-tight text-primary'>
               Sunday<span className='text-accent'>Bazar</span>
             </span>
@@ -48,7 +48,7 @@ export const Header = () => {
           {/* Desktop Nav */}
           <nav className='hidden md:flex space-x-8'>
             <Link
-              to='/sunday-bazar/'
+              to='/'
               className='text-gray-700 hover:text-accent font-medium transition-colors'
             >
               Home
@@ -222,7 +222,7 @@ export const Header = () => {
           </form>
           <div className='space-y-2'>
             <Link
-              to='/sunday-bazar/'
+              to='/'
               onClick={() => setMobileMenuOpen(false)}
               className='block text-gray-800 font-medium py-2'
             >

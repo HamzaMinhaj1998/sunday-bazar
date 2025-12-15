@@ -8,7 +8,7 @@ export const OrderSummaryPage = () => {
   if (!order) {
     return (
       <div className='min-h-screen flex items-center justify-center'>
-        <Link to='/sunday-bazar' className='text-accent hover:underline'>
+        <Link to='/sunday-bazar/' className='text-accent hover:underline'>
           Return Home
         </Link>
       </div>

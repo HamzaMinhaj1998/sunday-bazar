@@ -23,7 +23,7 @@ import { UserSettingsPage } from './pages/UserSettingsPage';
 import { WishlistPage } from './pages/WishlistPage';
 const router = createBrowserRouter([
   {
-    path: '/sunday-bazar',
+    path: '/sunday-bazar/',
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
